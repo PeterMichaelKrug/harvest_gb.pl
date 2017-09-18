@@ -6,15 +6,15 @@ my $time=time;
 print $time,"\a\n";
 #exit;
 ####get @ARGV
-my $ACCfile;                            #inputfile for Accessions
-                          #string with the genename
-my $fasout="genesout.fas"; unlink $fasout;               #string with outfilename from get_genes...
+my $ACCfile;                            		#inputfile for Accessions
+                          				#string with the genename
+my $fasout="genesout.fas"; unlink $fasout;              #string with outfilename from get_genes...
 my $namefile="taxon.txt"; unlink $namefile;
 if (@ARGV) {
     $ACCfile=$ARGV[0];
-    #$genereq=$ARGV[1];                    #now from first line of idfile
+    
 }else{say $!}
-
+########## to do: get other parameters for EUtilities via command line or template
 
 open(ACC,"<","$ACCfile") or die $!;
 
